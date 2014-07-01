@@ -11,6 +11,7 @@ app = Flask(__name__)
 
 #flag_json = 1 (json) = 0 (string)
 def predictShips(email, flag_json):
+  print("\nVamos a predecir...")
   shipsClass = predictionShips(email)
  
   if flag_json:  #json
