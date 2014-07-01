@@ -12,7 +12,7 @@ model = joblib.load('models/ships_model.txt')
 words = joblib.load('models/ships_words.txt')
 
 def predictionShips(email):
-    print("\n CONTENT: " + email)
+    #print("\n CONTENT: " + email)
     # Abro el fichero a voy a leer
     #f = open(email, 'r')
     # Matriz X
@@ -44,7 +44,8 @@ def predictionShips(email):
     print(yprob)
     print("\nClass predicted:") 
     print(ypred[0])
-    return [ypred[0],yprob]
+    array = [ypred[0],yprob[0][1],yprob[0][1],yprob[0][2]]
+    return array
     
 #fichero = "../Output/Posiciones Coasters/msg_9.txt"
 #prediccion = predictionShips(fichero)

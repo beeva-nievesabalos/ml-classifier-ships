@@ -11,15 +11,12 @@ app = Flask(__name__)
 
 #flag_json = 1 (json) = 0 (string)
 def predictShips(email, flag_json):
-  print("\npredictShips!!")
   shipsClass = predictionShips(email)
-  #phonesstring = "[" + ''.join(phones[:-1]) + "]"
-  #phonesarrayjson = ast.literal_eval(phonesstring)  
-
+ 
   if flag_json:  #json
-    resultado = jsonify({'ships_prediction': shipsClass[0], 'prob_c0': shipsClass[1][0], 'prob_c1': shipsClass[1][1], 'prob_c2': shipsClass[1][2]})
+    resultado = jsonify({'ships_prediction': shipsClass[0], 'prob_c0': shipsClass[1], 'prob_c1': shipsClass[2], 'prob_c2': shipsClass[3]})
   else: #string
-    resultado = json.dumps({'ships_prediction': shipsClass[0], 'prob_c0': shipsClass[1][0], 'prob_c1': shipsClass[1][1], 'prob_c2': shipsClass[1][2]})
+    resultado = json.dumps({'ships_prediction': shipsClass[0], 'prob_c0': shipsClass[1], 'prob_c1': shipsClass[2], 'prob_c2': shipsClass[3]})
   
   return resultado
 
