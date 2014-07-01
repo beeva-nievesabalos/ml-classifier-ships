@@ -17,9 +17,9 @@ def predictShips(email, flag_json):
   #phonesarrayjson = ast.literal_eval(phonesstring)  
 
   if flag_json:  #json
-    resultado = jsonify({'ships_prediction': shipsClass})
+    resultado = jsonify({'ships_prediction': shipsClass[0], 'prob_c0': shipsClass[1][0], 'prob_c1': shipsClass[1][1], 'prob_c2': shipsClass[1][2]})
   else: #string
-    resultado = json.dumps({'ships_prediction': shipsClass})
+    resultado = json.dumps({'ships_prediction': shipsClass[0], 'prob_c0': shipsClass[1][0], 'prob_c1': shipsClass[1][1], 'prob_c2': shipsClass[1][2]})
   
   return resultado
 
