@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 #flag_json = 1 (json) = 0 (string)
 def predictShips(email, flag_json):
-  
+  print("\npredictShips!!")
   shipsClass = predictionShips(email)
   #phonesstring = "[" + ''.join(phones[:-1]) + "]"
   #phonesarrayjson = ast.literal_eval(phonesstring)  

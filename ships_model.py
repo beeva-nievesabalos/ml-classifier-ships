@@ -11,14 +11,13 @@ from sklearn.externals import joblib
 model = joblib.load('models/ships_model.txt')
 words = joblib.load('models/ships_words.txt')
 
-
 def predictionShips(email):
-    print("\nFichero DATA: " + email)
+    print("\n CONTENT: " + email)
     # Abro el fichero a voy a leer
-    f = open(email, 'r')
+    #f = open(email, 'r')
     # Matriz X
     files=[]
-    files.append(f.read())
+    files.append(email)
     filess=[f.split() for f in files]
     print("\nNúmero de ficheros:")    
     print len(filess) 
