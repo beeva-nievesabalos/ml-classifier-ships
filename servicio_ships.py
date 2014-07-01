@@ -30,7 +30,7 @@ def ships():
     if request.headers['Content-Type'] == 'application/x-www-form-urlencoded':
       print("\n-------- request POST form['email'] -------")
       print(request.form['email'])
-      email = str(request.form['email'])
+      email = repr(request.form['email'])#str(request.form['email'])
       response = predictShips(email, 1) # devuelve json
 
       #### para evitar CORS ######
