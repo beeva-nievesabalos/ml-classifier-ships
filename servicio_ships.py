@@ -5,7 +5,7 @@ Created on Thu May 29 15:33:24 2014
 @author: nieves
 """
 
-from ships_classifier import predictionShips
+from ships_model import predictionShips
 from flask import Flask, request, url_for, render_template, jsonify, Response
 app = Flask(__name__)
 
